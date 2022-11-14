@@ -1,0 +1,19 @@
+.spinner-container{
+    margin: auto;
+}
+
+.spinner{
+    width: 2rem;
+    height: 2rem;
+    color: rgb(232, 230, 230);
+    border: .25rem solid;
+    border-top: .25rem solid var(--item-color) ;
+    border-radius: 50%;
+    animation: loading .9s linear infinite;
+}
+
+@keyframes loading {
+    100%{
+        transform: rotate(360deg);
+    }
+}

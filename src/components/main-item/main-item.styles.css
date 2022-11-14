@@ -1,0 +1,36 @@
+h2 {
+    transition: all .3s ease-in-out;
+    font-weight: 400 !important
+}
+
+.item h2:hover {
+    margin-right: .5rem;
+}
+
+h2 {
+    display: inline-block;
+    position: relative;
+    height: 100%;
+    cursor: pointer;
+}
+
+h2:after {
+    content: '';
+    width: 0px;
+    height: 1.5px;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: currentColor;
+    transition: 300ms;
+    margin-top: 6px;
+}
+
+h2:hover:after {
+    width: 100%;
+}
+
+h2:not(:hover):after {
+    left: 0;
+    right: auto;
+}

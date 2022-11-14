@@ -1,0 +1,10 @@
+.menu-title-container{
+    color: var(--title-color);
+    text-align: center;
+    white-space: normal;
+    word-wrap: break-word;
+    word-break: break-all;
+  }
+  h1{
+    margin-bottom: 0 !important;
+  }
