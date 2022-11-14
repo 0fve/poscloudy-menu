@@ -1,18 +1,22 @@
 h2 {
+    display: inline-block;
+    position: relative;
+    height: 100%;
+    cursor: pointer;
+    margin: 0;
     transition: all .3s ease-in-out;
     font-weight: 400 !important
+}
+
+.item{
+    margin-top: 2rem;
 }
 
 .item h2:hover {
     margin-right: .5rem;
 }
 
-h2 {
-    display: inline-block;
-    position: relative;
-    height: 100%;
-    cursor: pointer;
-}
+
 
 h2:after {
     content: '';

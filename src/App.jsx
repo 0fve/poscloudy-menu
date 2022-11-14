@@ -9,8 +9,10 @@ function App() {
       <div className="container">
         <main className="glass-container">
           <ResturantTitle />
-          <MainItemsList />
-          <ChildItemsList />
+          <div className="slider-container">
+            <MainItemsList />
+
+          </div>
         </main>
       </div>
     </>

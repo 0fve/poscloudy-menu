@@ -7,7 +7,11 @@ export const MainItem = ({ item }) => {
 
   async function slideToChildren() {
     const MainItems = document.querySelector(".menu-main-items");
-    MainItems.remove()
+    MainItems.style.transform = "translateX(80vw)";
+    
+    
+    const childItems = document.querySelector(".child-items");
+    childItems.style.transform = "translateX(-60vw)";
   }
 
   function handleClick(e) {

@@ -47,6 +47,8 @@ const MainItemsList = () => {
     fetchData();
   }, []);
 
+  
+
   return (
     <>
       <div className="menu-main-items">
