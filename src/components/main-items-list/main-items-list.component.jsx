@@ -1,7 +1,7 @@
 import "./main-items-list.styles.css";
-import { MainItem } from "../main-item/main-item.component";
+import { Item } from "../item/item.component";
 import LoadingSpinner from "../loading-spinner/loading-spinner.component";
-import { useEffect, useState } from "react";
+import {  useEffect, useState } from "react";
 
 const defaultMainItems = [
   {
@@ -30,7 +30,6 @@ const MainItemsList = () => {
         return response.json();
       })
       .then((response) => {
-        console.log(response);
         setMainItems(response);
         setIsLoading(false);
       })
@@ -40,14 +39,13 @@ const MainItemsList = () => {
     requested = true;
   }
 
+
   useEffect(() => {
-    async function fetchData() {
+    async function fetchMainItemsData() {
       await fetchMainItems();
     }
-    fetchData();
+    fetchMainItemsData();
   }, []);
-
-  
 
   return (
     <>
@@ -56,7 +54,7 @@ const MainItemsList = () => {
           <LoadingSpinner />
         ) : (
           mainItems.map((item, index) => {
-            return <MainItem key={index} item={item} />;
+            return <Item key={index} item={item} />;
           })
         )}
       </div>

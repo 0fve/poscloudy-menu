@@ -1,0 +1,11 @@
+.item{
+    margin-top: 1.5rem;
+}
+.item-info{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    margin-right: 2rem;
+    margin-left: 2rem;
+    text-align: end;
+}

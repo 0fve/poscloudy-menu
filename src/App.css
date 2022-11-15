@@ -7,13 +7,15 @@ body {
   height: 100vh;
   font-family: "Almarai";
   background-image: url(assets/bukhari.png);
-  background-size: contain;
+  background-attachment: scroll;
 }
 
 html {
   --title-color: #843434;
   --item-color: #541212;
 
+  height: 100%;
+  width: 100%;
 }
 
 .container {
@@ -25,14 +27,16 @@ html {
 }
 
 .glass-container {
-  backdrop-filter: blur(1rem);
-  -webkit-backdrop-filter: blur(.5rem);
+  backdrop-filter: blur(1.15rem);
+  -webkit-backdrop-filter: blur(1.15rem);
+  border: 1px white solid;
   border-radius: 10px;
   margin-top: calc(3rem + 10%);
-  width: 60vw;
-  max-height: 60vh;
+  width: 80vw;
+  max-height: 80vh;
   overflow-y: scroll;
   overflow-x: hidden;
+  margin: auto;
   transition: all 500ms ease-in-out;
 }
 
@@ -44,5 +48,16 @@ html {
 }
 
 .slider-container > div{
-  width: 60vw;
+  width: 80vw;
+  min-height: 50vw;
+  height: fit-content;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+
+@supports(padding:max(0px)) {
+  
 }

@@ -1,6 +1,8 @@
-import "./child-items-list.styles.css"
-import { useEffect } from "react";
+import "./child-items-list.styles.css";
+import { useContext, useEffect, useState } from "react";
 import LoadingSpinner from "../loading-spinner/loading-spinner.component";
+import { ChildrenItemsContext } from "../../context/child-items.context";
+import ChildItem from "../child-item/child-item.component";
 
 const defaultChildItemsList = [
   {
@@ -14,42 +16,15 @@ const defaultChildItemsList = [
 ];
 
 const ChildItemsList = () => {
+  const { childItems } = useContext(ChildrenItemsContext);
 
-  const [childItems, setChildItems] = useState(defaultChildItemsList);
-  const [isLoading, setIsLoading] = useState(true);
+  return (
+    <>
+      {childItems.map((item, index) => {
+        return <ChildItem item={item} key={index} />;
+      })}
+    </>
+  );
+};
 
-  let requested = false;
-
-  async function fetchChildtems() {
-    if (requested) return;
-    fetch(`http://51.38.114.0:3005/menu/item/${parentNo}`)
-      .then((response) => {
-        if (!response.ok) {
-          throw response;
-        }
-        return response.json();
-      })
-      .then((response) => {
-        console.log(response);
-        setChildItems(response);
-        setIsLoading(false);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-    requested = true;
-  }
-
-  useEffect(() => {
-    async function fetchData() {
-      await fetchChildtems();
-    }
-    fetchData();
-  }, []);
-
-  return;
-    // {isLoading ? true: null}
-
-}
-
-export default ChildItemsList
+export default ChildItemsList;

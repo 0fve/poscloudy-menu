@@ -1,0 +1,9 @@
+.child-items  {
+    color: var(--item-color);
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    text-align: center;
+    min-height: 70%;
+    transition: all 800ms ease-in-out;
+}

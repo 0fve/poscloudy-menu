@@ -1,0 +1,26 @@
+.made-by{
+    display: flex;
+    justify-content: center;
+    gap: 15%;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 1rem;
+    color: white;
+}
+.made-by p{
+    font-family: "Andalus";
+    text-align: center;
+    color: inherit;
+}
+a img {
+    transform: scale(2.1);
+    
+}
+@media (max-width: 375px) {
+    
+    a img {
+        transform: scale(2.1);
+        
+        margin-left: 2rem;
+    }
+}

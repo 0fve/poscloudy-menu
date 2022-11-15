@@ -4,7 +4,7 @@
 
 ::-webkit-scrollbar-track {
     background-color: transparent;
-    border-radius: 10px;
+    padding: 1rem;
 }
 
 ::-webkit-scrollbar-thumb {
