@@ -1,5 +1,5 @@
-import "./child-item.styles.css"
-import Navigation from "../navigation/navigation.component";
+import "./child-item.styles.css";
+
 const ChildItem = ({ item }) => {
   const { Caption, Price } = item;
   return (

@@ -10,20 +10,22 @@ const Home = () => {
   const { childItems } = useContext(ChildrenItemsContext);
 
   return (
-    <div className="container">
-      <main className="glass-container">
-        <ResturantTitle />
-        <MadeByFooter />
-        <div className="slider-container">
-          <MainItemsList />
+    <>
+      <div className="container">
+        <main className="glass-container">
+          <ResturantTitle />
+          <MadeByFooter />
+          <div className="slider-container">
+            <MainItemsList />
 
-          <div className="child-items">
-            <Navigation />
-            {childItems ? <ChildItemsList /> : null}
+            <div className="child-items">
+              <Navigation />
+              {childItems ? <ChildItemsList /> : null}
+            </div>
           </div>
-        </div>
-      </main>
-    </div>
+        </main>
+      </div>
+    </>
   );
 };
 

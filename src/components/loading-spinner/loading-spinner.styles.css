@@ -1,5 +1,5 @@
 .spinner-container{
-    margin: auto;
+    display: flex;
 }
 
 .spinner{
@@ -10,6 +10,7 @@
     border-top: .25rem solid var(--item-color) ;
     border-radius: 50%;
     animation: loading .9s linear infinite;
+    margin: auto;
 }
 
 @keyframes loading {

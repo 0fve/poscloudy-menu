@@ -20,9 +20,9 @@ export const ChildrenItemsProvider = ({ children }) => {
     fetchChildItems,
   };
 
-  let requested = false;
   async function fetchChildItems(parentNo) {
-    if (requested) return;
+    console.log('req');
+
     await fetch(`http://51.38.114.0:3005/menu/item/${parentNo}`)
       .then((response) => {
         if (!response.ok) {
@@ -32,11 +32,12 @@ export const ChildrenItemsProvider = ({ children }) => {
       })
       .then((response) => {
         setChildItems(response);
+        console.log(response);
       })
       .catch((error) => {
         console.log(error);
       });
-    requested = true;
+
   }
 
   return (
