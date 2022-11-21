@@ -3,6 +3,7 @@ import { Item } from "../item/item.component";
 import LoadingSpinner from "../loading-spinner/loading-spinner.component";
 import { ChildrenItemsContext } from "../../context/child-items.context";
 import { useEffect, useState, useRef, useContext } from "react";
+import { ResturantContext } from "../../context/resturant.context";
 
 const defaultMainItems = [
   {
@@ -18,14 +19,16 @@ const defaultMainItems = [
 const MainItemsList = () => {
   const [mainItems, setMainItems] = useState(defaultMainItems);
   const [isLoading, setIsLoading] = useState(true);
-  const { fetchChildItems } = useContext(ChildrenItemsContext);
+  const { fetchChildItems, setIsChildLoading } = useContext(ChildrenItemsContext);
+  const { subscribeNumber } = useContext(ResturantContext);
   const ItemsList = useRef();
 
   let requested = false;
 
   async function fetchMainItems() {
+    setIsLoading(true);
     if (requested) return;
-    fetch("http://51.38.114.0:3005/menu/items")
+    fetch(`http://51.38.114.0:3005/menu/${subscribeNumber}/items`)
       .then((response) => {
         if (!response.ok) {
           throw response;
@@ -44,15 +47,14 @@ const MainItemsList = () => {
 
   function slideToChildren() {
     ItemsList.current.style.transform = "translateX(80vw)";
-
     const childItems = document.querySelector(".child-items");
     childItems.style.transform = "translateX(-80vw)";
+    setIsChildLoading(true)
   }
 
 
   function handleClick(e) {    
     slideToChildren()
-    console.log(e.target.dataset.itemno);
     fetchChildItems(e.target.dataset.itemno);
   }
 
@@ -77,7 +79,7 @@ const MainItemsList = () => {
         item.removeEventListener("click", handleClick);
       }
     };
-  }, [isLoading]);
+  }, [isLoading, subscribeNumber]);
 
   return (
     <>

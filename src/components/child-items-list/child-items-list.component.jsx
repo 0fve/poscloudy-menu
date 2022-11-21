@@ -16,13 +16,17 @@ const defaultChildItemsList = [
 ];
 
 const ChildItemsList = () => {
-  const { childItems } = useContext(ChildrenItemsContext);
+  const { isChildLoading, childItems } = useContext(ChildrenItemsContext);
 
   return (
     <>
-      {childItems.map((item, index) => {
-        return <ChildItem item={item} key={index} />;
-      })}
+      {isChildLoading ? (
+        <LoadingSpinner />
+      ) : (
+        childItems.map((item, index) => {
+          return <ChildItem item={item} key={index} />;
+        })
+      )}
     </>
   );
 };

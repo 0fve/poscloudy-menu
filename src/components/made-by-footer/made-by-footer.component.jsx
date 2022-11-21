@@ -5,7 +5,7 @@ const MadeByFooter = () => {
   return (
     <footer className="made-by">
       <p>Made By</p>
-      <a href="https://p-ways.com">
+      <a href="https://p-ways.com" target="_blank">
         <img src={poscloudyLogo} alt="https://p-ways.com" />
       </a>
     </footer>

@@ -1,29 +1,31 @@
-import { createContext, useState } from "react";
+import { createContext, useContext, useState } from "react";
+import { ResturantContext } from "./resturant.context";
 
 export const ChildrenItemsContext = createContext({
   setChildItems: () => null,
   childItems: null,
   fetchChildItems: (parentNo) => null,
-  isLoading: true,
-  setIsLoading: () => null,
+  isChildLoading: true,
+  setIsChildLoading: () => null,
 });
 
 export const ChildrenItemsProvider = ({ children }) => {
+  const { subscribeNumber } = useContext(ResturantContext);
   const [childItems, setChildItems] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
-  
+  const [isChildLoading, setIsChildLoading] = useState(true);
+
   const val = {
     childItems,
     setChildItems,
-    isLoading,
-    setIsLoading,
+    isChildLoading,
+    setIsChildLoading,
     fetchChildItems,
   };
 
   async function fetchChildItems(parentNo) {
-    console.log('req');
-
-    await fetch(`http://51.38.114.0:3005/menu/item/${parentNo}`)
+    await fetch(
+      `http://51.38.114.0:3005/menu/${subscribeNumber}/item/${parentNo}`
+    )
       .then((response) => {
         if (!response.ok) {
           throw response;
@@ -32,12 +34,11 @@ export const ChildrenItemsProvider = ({ children }) => {
       })
       .then((response) => {
         setChildItems(response);
-        console.log(response);
+        setIsChildLoading(false);
       })
       .catch((error) => {
         console.log(error);
       });
-
   }
 
   return (
