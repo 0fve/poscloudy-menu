@@ -1,11 +1,12 @@
 .menu-title-container {
   color: var(--title-color);
   text-align: center;
-  white-space: normal;
-  word-wrap: break-word;
+
 }
 
 h1 {
   margin-bottom: 0 !important;
-  stroke-width: 1px;
+  stroke-width: 200px !important;
+  white-space: normal;
+  word-wrap: break-word;
 }

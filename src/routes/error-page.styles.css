@@ -1,0 +1,13 @@
+.error-page{
+    height: 100vh;
+}
+.error-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.error-container h1 {
+    font-weight: bolder;
+    color: white;
+}

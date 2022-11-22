@@ -8,15 +8,13 @@ export const ResturantContext = createContext({
   getSubscribeNumber: () => {},
 });
 
-let requested = false;
 export const ResturantProvider = ({ children }) => {
-  const [currentResturant, setCurrentResturant] = useState(null);
+  const [currentResturant, setCurrentResturant] = useState("");
   const [subscribeNumber, setSubscribeNumber] = useState(null);
 
   async function getSubscribeNumber(resturantName) {
-    if (requested) return;
     setCurrentResturant(resturantName);
-    await fetch(`http://51.38.114.0:3005/menu/resturant${resturantName}`)
+    fetch(`https://api.p-ways.com/menu/resturant${resturantName}`)
       .then((response) => {
         if (!response.ok) {
           throw response;
@@ -29,7 +27,6 @@ export const ResturantProvider = ({ children }) => {
       .catch((error) => {
         console.log(error);
       });
-    requested = true;
   }
 
   const val = {

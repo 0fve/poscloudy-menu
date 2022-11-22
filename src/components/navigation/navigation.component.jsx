@@ -11,7 +11,7 @@ const Navigation = () => {
   }
 
   return (
-    <div className="arrows-container" onClick={handleCick}>
+    <div className="nav-container" onClick={handleCick}>
       <h2>عودة للقائمة</h2>
     </div>
   );

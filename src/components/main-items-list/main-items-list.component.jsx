@@ -28,7 +28,7 @@ const MainItemsList = () => {
   async function fetchMainItems() {
     setIsLoading(true);
     if (requested) return;
-    fetch(`http://51.38.114.0:3005/menu/${subscribeNumber}/items`)
+    fetch(`https://api.p-ways.com/menu/${subscribeNumber}/items`)
       .then((response) => {
         if (!response.ok) {
           throw response;
@@ -49,6 +49,7 @@ const MainItemsList = () => {
     ItemsList.current.style.transform = "translateX(80vw)";
     const childItems = document.querySelector(".child-items");
     childItems.style.transform = "translateX(-80vw)";
+    document.querySelector(".glass-container").scroll(0, 0)
     setIsChildLoading(true)
   }
 
@@ -60,6 +61,7 @@ const MainItemsList = () => {
 
   useEffect(() => {
 
+    if (!subscribeNumber) return;
     async function fetchMainItemsData() {
       await fetchMainItems();
     }

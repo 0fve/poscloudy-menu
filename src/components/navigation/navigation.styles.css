@@ -1,11 +1,11 @@
-.arrows-container{
+.nav-container{
     text-align: end;
     margin-right: auto;
     margin-left: auto;
     margin-top: -1rem;
     margin-bottom: 1rem;
 }
-.arrows-container h2{
+.nav-container h2{
     font-weight: bolder !important;
     color: white;
 }

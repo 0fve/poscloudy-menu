@@ -24,7 +24,7 @@ export const ChildrenItemsProvider = ({ children }) => {
 
   async function fetchChildItems(parentNo) {
     await fetch(
-      `http://51.38.114.0:3005/menu/${subscribeNumber}/item/${parentNo}`
+      `https://api.p-ways.com/menu/${subscribeNumber}/item/${parentNo}`
     )
       .then((response) => {
         if (!response.ok) {

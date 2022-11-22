@@ -10,6 +10,7 @@ h2 {
 
 .item{
     margin-bottom: 1rem;
+    align-items: center;
 }
 .item:last-child{
     padding-bottom: 1rem;
