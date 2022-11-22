@@ -1,0 +1,28 @@
+.loading-page{
+    height: 100vh;
+    color: white;
+}
+.loading-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100%;
+    backdrop-filter: blur(2.75rem);
+    -webkit-backdrop-filter: blur(2.75rem);
+    text-align: center;
+    
+}
+.loading-container h1{
+    margin: 0 1rem!important;
+
+} 
+.loading-container .img-container{
+    margin: 0 1rem!important;
+    width: 55vw;
+}
+
+.loading-container .img-container img{
+    width: 100%;
+}

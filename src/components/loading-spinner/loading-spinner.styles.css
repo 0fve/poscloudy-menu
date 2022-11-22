@@ -6,8 +6,8 @@
     width: 2rem;
     height: 2rem;
     color: rgb(232, 230, 230);
-    border: .25rem white solid;
-    border-top: .25rem solid var(--item-color) ;
+    border: .25rem whitesmoke solid;
+    border-top: .25rem solid var(--primary-color) ;
 
     border-radius: 50%;
     animation: loading .9s linear infinite;

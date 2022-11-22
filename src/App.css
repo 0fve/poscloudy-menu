@@ -7,13 +7,15 @@ body {
   height: 100vh;
   overflow: hidden;
   font-family: "Almarai";
+  background-color: #000000;
   background-image: url(assets/bukhari.png);
-  background-attachment: scroll;
+  object-fit: cover;
 }
 
 html {
-  --title-color: #541212;
-  --item-color: #541212;
+  --title-color: whitesmoke;
+  --primary-color: #98A755;
+  --item-color: whitesmoke;
 
   
 
@@ -30,9 +32,9 @@ html {
 }
 
 .glass-container {
-  backdrop-filter: blur(.5rem);
-  -webkit-backdrop-filter: blur(1.15rem);
-  border: 1px white solid;
+  backdrop-filter: blur(2rem);
+  -webkit-backdrop-filter: blur(2rem);
+  border: 2px #98A755 solid;
   border-radius: 10px;
   margin-top: calc(3rem + 10%);
   width: 80vw;
