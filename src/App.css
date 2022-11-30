@@ -62,3 +62,26 @@ html {
 *{
   box-sizing: border-box;
 }
+
+
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.p-ways_logo-container{
+  width: 100%;
+  object-fit: contain;
+  height: 10vh;
+  overflow: hidden;
+}
+.container .glass-container h3{
+  margin-top: .25rem !important;
+  margin-bottom: 0 !important;
+}
+.p-ways_logo-container img{
+  margin-top: 1rem !important;
+  height: 70%;
+  width: 100%;
+}

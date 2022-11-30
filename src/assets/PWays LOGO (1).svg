@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="627.429pt" height="357.133pt" viewBox="0 0 627.429 357.133">
+<g enable-background="new">
+<g id="Layer-1" data-name="Layer 1">
+<clipPath id="cp0">
+<path transform="matrix(1,0,0,-1,0,357.133)" d="M 0 357.133 L 627.429 357.133 L 627.429 0 L 0 0 Z "/>
+</clipPath>
+<g clip-path="url(#cp0)">
+<path transform="matrix(1,0,0,-1,218.0537,168.081)" d="M 0 0 C 0 -52.433 -42.505 -94.939 -94.939 -94.939 C -147.372 -94.939 -189.877 -52.433 -189.877 0 C -189.877 52.433 -147.372 94.939 -94.939 94.939 C -42.505 94.939 0 52.433 0 0 " fill="#065093"/>
+</g>
+<text fill="#ffffff" xml:space="preserve" transform="matrix(1 0 -0 1 0 357.133)" font-size="177.2554" font-family="Bahnschrift"><tspan y="-123.8496" x="70.939">P</tspan></text>
+<text xml:space="preserve" transform="matrix(1 0 -0 1 0 357.133)" font-size="157.6821" font-family="Bahnschrift"><tspan y="-131.5005" x="237.6748 367.33683 448.93733 525.0978">Ways</tspan></text>
+</g>
+</g>
+</svg>

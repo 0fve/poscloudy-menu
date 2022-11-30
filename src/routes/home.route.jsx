@@ -5,7 +5,7 @@ import ChildItemsList from "../components/child-items-list/child-items-list.comp
 import MainItemsList from "../components/main-items-list/main-items-list.component";
 import { useContext } from "react";
 import { ChildrenItemsContext } from "../context/child-items.context";
-
+import PWays from "../assets/PWays LOGO (1).svg";
 const Home = () => {
   const { childItems } = useContext(ChildrenItemsContext);
 
@@ -24,6 +24,12 @@ const Home = () => {
             </div>
           </div>
         </main>
+        <div className="glass-container">
+          <h3>تم التشغيل بواسطة</h3>
+          <div className="p-ways_logo-container">
+            <a href=""><img src={PWays} alt="" /></a>
+          </div>
+        </div>
       </div>
     </>
   );
